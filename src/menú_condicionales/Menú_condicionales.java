@@ -66,9 +66,9 @@ public class Menú_condicionales {
                  n3,
                  n4,
                  n5,
-                 impar=0,
-                 par=0,
-                 cero=0;
+                 impar = 0,
+                 par = 0,
+                 cero = 0;
                 System.out.println("Ingrese un número de 5 dígitos: ");
                 numero = leer.nextInt();
                 if (numero <= 99999 && numero >= 10000 | numero >= -99999 && numero <= -10000) {
@@ -78,78 +78,104 @@ public class Menú_condicionales {
                     n4 = ((numero % 10000) % 1000) % 100 / 10;
                     n5 = (((numero % 10000) % 1000) % 100) % 10;
                     if (n1 == 0) {
-                        cero= cero+1;
-                    }
-                    else{
+                        cero = cero + 1;
+                    } else {
                         switch (n1 % 2) {
                             case 0:
-                                par=par+1;
+                                par = par + 1;
                                 break;
                             default:
-                                impar=impar+1;
+                                impar = impar + 1;
                                 break;
                         }
                     }
                     if (n2 == 0) {
-                        cero= cero+1;
-                    }
-                    else{
+                        cero = cero + 1;
+                    } else {
                         switch (n2 % 2) {
                             case 0:
-                                par=par+1;
+                                par = par + 1;
                                 break;
                             default:
-                                impar=impar+1;
+                                impar = impar + 1;
                                 break;
                         }
                     }
                     if (n3 == 0) {
-                        cero= cero+1;
-                    }
-                    else{
+                        cero = cero + 1;
+                    } else {
                         switch (n3 % 2) {
                             case 0:
-                                par=par+1;
+                                par = par + 1;
                                 break;
                             default:
-                                impar=impar+1;
+                                impar = impar + 1;
                                 break;
                         }
                     }
                     if (n4 == 0) {
-                        cero= cero+1;
-                    }
-                    else{
+                        cero = cero + 1;
+                    } else {
                         switch (n4 % 2) {
                             case 0:
-                                par=par+1;
+                                par = par + 1;
                                 break;
                             default:
-                                impar=impar+1;
+                                impar = impar + 1;
                                 break;
                         }
                     }
                     if (n5 == 0) {
-                        cero= cero+1;
-                    }
-                    else{
+                        cero = cero + 1;
+                    } else {
                         switch (n5 % 2) {
                             case 0:
-                                par=par+1;
+                                par = par + 1;
                                 break;
                             default:
-                                impar=impar+1;
+                                impar = impar + 1;
                                 break;
                         }
                     }
-                    System.out.println("La cantidad de números pares es de "+ par + ", la cantidad de números impares es de " + impar + " y la cantidad de ceros es de "+ cero);
-                    } else {
-                        System.out.println("Escribe por favor un número de cinco dígitos");
-                    }
+                    System.out.println("La cantidad de números pares es de " + par + ", la cantidad de números impares es de " + impar + " y la cantidad de ceros es de " + cero);
+                } else {
+                    System.out.println("Escribe por favor un número de cinco dígitos");
+                }
 
-                    break;                      
+                break;
             case 3:
-                System.out.println("3");
+                /*Diseñar un algoritmo que lea un número N Entero mayor que 100 (debe validar el
+                  número). Si N termina en 4,7 o 9; informar si es divisible por 3, si termina en 1 o 5,
+                  halle su décima parte, en otro caso divida el número entre 17 y halle su parte
+                  entera y su residuo. Utilizar la estructura Dependiendo De o Según sea*/
+                int N;
+                System.out.println("ingrese un numero mayor que 100:");
+                N = leer.nextInt();
+                if (N > 100) {
+                    switch (N % 10) {
+                        case 4:
+                        case 7:
+                        case 9:
+                            switch (N % 3) {
+                                case 0:
+                                    System.out.println("divisible por 3");
+                                    break;
+                                default:
+                                    System.out.println("no es divisible por 3");
+                                    break;
+                            }
+                            break;
+                        case 1:
+                        case 5:
+                            System.out.println("su decima parte es: " + (N / 10));
+                            break;
+                        default:
+                            System.out.println("parte entera: " + N / 17 + " residuo: " + N % 17);
+                            break;
+                    }
+                }else{
+                    System.out.println("ingrese un numero mayor que 100");
+                }
                 break;
             case 4:
                 System.out.println("4");
