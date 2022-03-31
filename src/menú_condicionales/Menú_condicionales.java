@@ -17,7 +17,7 @@ public class Menú_condicionales {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        /*hola*/
         Scanner leer = new Scanner(System.in);
         int menu;
         System.out.println("Bienvenido al Menú.\n¿Qué desea hacer?\n1. Encontrar el cuadrante de una coordenada\n2. Conocer cuántos ceros, pares e impares tiene un número de cinco dígitos\n3. Operar un entero mayor a 100 dependiendo de su último dígito\n4. Salir del menú\n\nPor favor ingrese un número del 1 al 4 dependiendo de lo que desee hacer: ");
