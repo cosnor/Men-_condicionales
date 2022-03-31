@@ -142,7 +142,7 @@ public class Menú_condicionales {
                                 break;
                         }
                     }
-                    System.out.println("La cantidad de números pares es de "+ par + ", la cantidad de números impares es de " + impar + "y la cantidad de ceros es de "+ cero);
+                    System.out.println("La cantidad de números pares es de "+ par + ", la cantidad de números impares es de " + impar + " y la cantidad de ceros es de "+ cero);
                     } else {
                         System.out.println("Escribe por favor un número de cinco dígitos");
                     }
