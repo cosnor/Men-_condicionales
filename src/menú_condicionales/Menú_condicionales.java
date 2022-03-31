@@ -20,16 +20,16 @@ public class Menú_condicionales {
         /*hola*/
         Scanner leer = new Scanner(System.in);
         int menu;
-        System.out.println("Bienvenido al Menú.\n¿Qué desea hacer?\n1. Encontrar el cuadrante de una coordenada\n2. Conocer cuántos ceros, pares e impares tiene un número de cinco dígitos\n3. Operar un entero mayor a 100 dependiendo de su último dígito\n4. Salir del menú\n\nPor favor ingrese un número del 1 al 4 dependiendo de lo que desee hacer: ");
+        System.out.println("------------MENÚ------------\nBienvenido al Menú.\n¿Qué desea hacer?\n1. Encontrar el cuadrante de una coordenada\n2. Conocer cuántos ceros, pares e impares tiene un número de cinco dígitos\n3. Operar un entero mayor a 100 dependiendo de su último dígito\n4. Salir del menú\n\nPor favor ingrese un número del 1 al 4 dependiendo de lo que desee hacer: ");
         menu = leer.nextInt();
 
         switch (menu) {
             case 1:
                 float x,
                  y;
-                System.out.println("Ingrese por favor la coordena en x: ");
+                System.out.println("Ingrese por favor la coordenada en x (un número real): ");
                 x = leer.nextFloat();
-                System.out.println("ingrese por favor la coordenada en y: ");
+                System.out.println("Ingrese por favor la coordenada en y (un número real): ");
                 y = leer.nextFloat();
 
                 if (x > 0 && y > 0) {
@@ -139,17 +139,13 @@ public class Menú_condicionales {
                     }
                     System.out.println("La cantidad de números pares es de " + par + ", la cantidad de números impares es de " + impar + " y la cantidad de ceros es de " + cero);
                 } else {
-                    System.out.println("Escribe por favor un número de cinco dígitos");
+                    System.out.println("Escriba por favor un número de cinco dígitos");
                 }
 
                 break;
             case 3:
-                /*Diseñar un algoritmo que lea un número N Entero mayor que 100 (debe validar el
-                  número). Si N termina en 4,7 o 9; informar si es divisible por 3, si termina en 1 o 5,
-                  halle su décima parte, en otro caso divida el número entre 17 y halle su parte
-                  entera y su residuo. Utilizar la estructura Dependiendo De o Según sea*/
                 int N;
-                System.out.println("ingrese un numero mayor que 100:");
+                System.out.println("Ingrese un numero mayor que 100:");
                 N = leer.nextInt();
                 if (N > 100) {
                     switch (N % 10) {
@@ -158,27 +154,27 @@ public class Menú_condicionales {
                         case 9:
                             switch (N % 3) {
                                 case 0:
-                                    System.out.println("divisible por 3");
+                                    System.out.println("El número es divisible por 3");
                                     break;
                                 default:
-                                    System.out.println("no es divisible por 3");
+                                    System.out.println("El número no es divisible por 3");
                                     break;
                             }
                             break;
                         case 1:
                         case 5:
-                            System.out.println("su decima parte es: " + (N / 10));
+                            System.out.println("La decima parte del número es " + (N / 10));
                             break;
                         default:
-                            System.out.println("parte entera: " + N / 17 + " residuo: " + N % 17);
+                            System.out.println("La parte entera del número es " + N / 17 + " y el residuo es de " + N % 17);
                             break;
                     }
                 }else{
-                    System.out.println("ingrese un numero mayor que 100");
+                    System.out.println("Ingrese un numero mayor que 100");
                 }
                 break;
             case 4:
-                System.out.println("4");
+                System.out.println("Ha salido del menú. Hasta luego.");
                 break;
             default:
                 System.out.println("Debe ingresar un número del 1 al 4, según las indicaciones del menú");
